@@ -1,3 +1,18 @@
 <p>home works!</p>
-
-{{ data | json }}
+<!-- {{ data | json }} -->
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Director</th>
+      <th>Opening_crawl</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let film of data.results">
+      <td>{{ film.title }}</td>
+      <td>{{ film.director }}</td>
+      <td>{{ film.opening_crawl }}</td>
+    </tr>
+  </tbody>
+</table>
